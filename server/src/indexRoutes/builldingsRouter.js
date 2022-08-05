@@ -1,4 +1,4 @@
-
+const buildings = require('../models/buildings');
 const express = require('express')
 const router = express.Router()
 
