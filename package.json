@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/sktvera/MegaTeleServices/issues"
   },
-  "homepage": "https://github.com/sktvera/MegaTeleServices#readme"
+  "homepage": "https://github.com/sktvera/MegaTeleServices#readme",
+  "dependencies": {
+    "create-react-app": "^5.0.1"
+  }
 }
