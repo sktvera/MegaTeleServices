@@ -4,6 +4,7 @@ import axios from 'axios'
 //REACT ROUTER DOM
 import { Link, useNavigate } from "react-router-dom";
 
+
 //validaciones de formularios
   const Awesome = () => {
       const navigate = useNavigate();
@@ -32,7 +33,14 @@ import { Link, useNavigate } from "react-router-dom";
       })
       .then(err => {console.log(err)})
 
-    }
+    };
+   /*  const loadBuildings = () =>{
+      fetch('http://localhost:3300/api/buildings')
+      .then(res =>res.json())
+      .then(allBuildings => console.log(allBuildings))
+    } */
+
+    
 
        return (
        <div className="grilla">
@@ -44,16 +52,18 @@ import { Link, useNavigate } from "react-router-dom";
           
              
      
-              {/* <input className="input_select" value={name} onChange={(e)=>{setName.e.target.value}} onBlur={(v) => setName(v.target.value)}></input> */}
+              <input className="input_select" value={name} /* onChange={(e)=>{setName.e.target.value}} */ onBlur={(v) => setName(v.target.value)}></input>
       
           </div>
       
       <div className="inputs">
-          {/* <input className="input_select"value={lastName} onChange={(e)=>{setLastName.e.target.value}} placeholder="LAST NAME" onBlur={(v) => setLastName(v.target.value)}></input> */}
+          <input className="input_select"value={lastName} /* onChange={(e)=>{setLastName.e.target.value}} */ placeholder="LAST NAME" onBlur={(v) => setLastName(v.target.value)}></input>
       </div>
       
       <div className="btns">
-          {/* <a href="#"onClick={validateData + agregarUsuario} className="btn">NEXT</a> */}
+      <Link to="/Address">
+          <a href="#"onClick={validateData} className="btn">NEXT</a>
+      </Link>
       </div>
 
       <div>
