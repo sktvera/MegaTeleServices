@@ -9,8 +9,7 @@ const connectDataBase = require('./connect/connectDataBase.js');
 // express
 const app = express();
 
-//ejecutando cors
-app.use(cors());
+
 
 //router
 const indexRoutes = require('./indexRoutes/builldingsRouter');
@@ -23,6 +22,9 @@ app.listen(3300,()=>{
   //Ruta global http://localhost/home
 //usar localhost:3300/
 app.use('/',indexRoutes);
+
+//ejecutando cors
+app.use(cors());
 
 
 
