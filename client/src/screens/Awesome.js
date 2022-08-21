@@ -7,9 +7,9 @@ import { Link/* , useNavigate */ } from "react-router-dom";
 
 //validaciones de formularios
   const Awesome = () => {
-       /*const navigate = useNavigate();
-      const [coasters, setCoasters] = useState("");
-       const [lastName, setLastName] = useState(""); 
+     /*   const navigate = useNavigate(); */
+      const [coasters, setCoasters] = useState([]);
+      /* const [lastName, setLastName] = useState(""); 
 /*
       const validateData = () => {
        let validate = name !== "" && lastName != "";
@@ -37,7 +37,7 @@ import { Link/* , useNavigate */ } from "react-router-dom";
     const loadBuildings = () =>{
       fetch('http://localhost:3300/api/buildings')
       .then(res =>res.json())
-      .then(allBuildings => console.log(allBuildings))
+      .then(allBuildings => setCoasters(allBuildings))
     } 
 
     
@@ -46,11 +46,16 @@ import { Link/* , useNavigate */ } from "react-router-dom";
        <div className="grilla">
         <div>
             <p>Awesome! Let's get started with the basics.</p>
-           {/*  {coasters.map(eachCoaster =>{
-              return <article>
-
+           
+           {coasters.map(eachCoaster =>{
+            return(
+              <article>
+                <p>
+                  {eachCoaster.name}
+                </p>
               </article>
-            })} */}
+            )
+           })}
         </div>
 
           <div className="box">

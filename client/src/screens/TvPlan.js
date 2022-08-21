@@ -1,4 +1,6 @@
 import { Link } from "react-router-dom";
+/* import{FontAwesomeIcon} from "@fortawesome/react-fontawesome"
+import{fabrands, faxing}from "@fortawesome/free-solid-svg-icons" */
 const TvPlan = () => {
   return (
     <div className="grilla">
@@ -10,15 +12,18 @@ const TvPlan = () => {
        <div className="card"> 
           <p>Premium</p>
           <label>Service</label>
-          <p>50</p>
-        <input type="checkbox"></input>
+          {/* <FontAwesomeIcon icon={faxing} />
+          <FontAwesomeIcon icon={fabrands} /> */}
+          <p className="numberx">50</p>
+        <input type="radio"></input>
         </div>
 
         <div className="card" >
           <p>Basic</p>
           <label>Service</label>
-          <p>30</p>
-        <input type="checkbox"></input>
+          {/* <FontAwesomeIcon icon="fa-brands fa-xing" /> */}
+          <p className="numberx">30</p>
+        <input className="radio" type="radio"></input>
         </div>
        </div>
       

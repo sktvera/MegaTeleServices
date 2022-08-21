@@ -6,6 +6,7 @@ const Address = () => {
   const navigate = useNavigate();
   const [streetAdress, setStreetAdress] = useState("");
   const [apt, setApt] = useState("");
+  const [coasters, setCoasters] = useState([]);
 
     const validateData = () => {
     let validate = streetAdress !== "" && apt != "";
@@ -13,6 +14,15 @@ const Address = () => {
     console.log(validate);
     validate && navigate("/TvPlan");
   };
+
+  const loadBuildings = () =>{
+    fetch('http://localhost:3300/api/buildings')
+    .then(res =>res.json())
+    .then(allBuildings => setCoasters(allBuildings))
+  } 
+
+  
+    loadBuildings();
   return (
     <div className="grilla">
       <div></div>
