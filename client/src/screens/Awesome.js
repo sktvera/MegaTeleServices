@@ -47,15 +47,7 @@ import { Link/* , useNavigate */ } from "react-router-dom";
         <div>
             <p>Awesome! Let's get started with the basics.</p>
            
-           {coasters.map(eachCoaster =>{
-            return(
-              <article>
-                <p>
-                  {eachCoaster.name}
-                </p>
-              </article>
-            )
-           })}
+         
         </div>
 
           <div className="box">
