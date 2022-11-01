@@ -1,0 +1,28 @@
+.containerWelcome{
+display: flex;
+justify-content: center;
+align-items: center;
+margin-top: 38em;}
+
+
+.containerWelcome .itemWelcome h1{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    color: #004274;
+    font-size: 6em;
+}
+
+.containerWelcome .itemWelcome label{
+    display: flex;
+    justify-content: center;
+    font-size: 2em;
+}
+
+.containerWelcome .itemWelcome .buttonWelcome{
+    background-color:#004274;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   
+}
