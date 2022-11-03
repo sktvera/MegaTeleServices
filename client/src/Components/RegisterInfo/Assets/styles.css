@@ -1,0 +1,49 @@
+.contanerRegister{
+display: flex;
+justify-content: center;
+align-items: center;
+margin-top: 25em;
+}
+ 
+.contanerRegister-grid{
+    display: grid;
+    grid-template-rows: 33% 33% 33%;
+    max-width: 100%;
+    height: 30em;
+}
+.title{display: flex;
+justify-content: center;}
+
+.title h2{
+    font-size: 40px;
+    color: rgb(46, 45, 45);
+}
+
+
+.buttonAndlabel{
+    display: grid;
+    grid-template-rows: 50% 50%;
+    height: 120px;
+    width: 160px;
+}
+.cotainerButtonAndlabel{
+    display: flex;
+    justify-content: center;
+}
+
+.inputs{
+    display: flex;
+    justify-content: center;
+    height: 140px;
+    width:65em;
+    display: grid;
+    grid-template-columns: 50%;
+}
+.buttonAndlabel label{
+    font-size: 14px;
+    display: flex;
+    justify-content: center;
+    color: rgb(147, 145, 145);
+    margin-top: 20px;
+}
+

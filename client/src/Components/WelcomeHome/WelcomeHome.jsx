@@ -1,8 +1,15 @@
 import React from 'react'
 import './Assets/styles.css'
 import{ Button,Grid,Box }  from '@mui/material'
+import { useNavigate } from "react-router-dom";
 
 function WelcomeHome() {
+  const navigate = useNavigate();
+
+  const navigateTologin = () => {
+    navigate(`/FormLogin`);
+    }
+
   return (
     <div className='containerWelcome'>
         <Grid >
@@ -15,7 +22,10 @@ function WelcomeHome() {
                   <label>Are you ready to enjoy ultra-best service?</label>
               </Box>
               <Box className='itemWelcome'>
-                  <Button variant="contained" className='buttonWelcome'>Let's DO IT!</Button>
+                  <Button
+                  onClick={navigateTologin} 
+                  variant="contained" 
+                  className='buttonWelcome'>Let's DO IT!</Button>
               </Box>
         </Grid>
     </div>
