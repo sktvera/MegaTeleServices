@@ -1,16 +1,25 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { TextField, Button } from '@mui/material'
 import './Assets/styles.css'
 import { useNavigate } from "react-router-dom";
 
 
 function RegisterInfo() {
-
     const navigate = useNavigate();
+    const [dataUserOne, setDataUserOne] = useState({})
+    
+    const navigateTobuilding = () => {
+        navigate(`/Search`,{state: {dataUserOne}});
+        }
 
-const navigateTobuilding = () => {
-  navigate(`/Search`);
-  }
+        const handleChangeUserOne = (e) => {
+            const value = e.target.value
+            setDataUserOne({
+                ...dataUserOne,
+                [e.target.name]: value
+            })
+            console.log(dataUserOne)
+        }
 
   return (
     <div className='contanerRegister'>
@@ -20,16 +29,16 @@ const navigateTobuilding = () => {
             </div>
             <div className='contanerRegister-item inputs'>
                 <div >
-                    <TextField className='inputsText' fullWidth label="FIRST NAME" id="fullWidth" />
+                    <TextField name='firstName' onChange={handleChangeUserOne} className='inputsText' fullWidth label="FIRST NAME" id="fullWidth" />
                 </div>
                 <div >
-                    <TextField fullWidth label="LAST NAME" id="fullWidth" />
+                    <TextField name='LastName' onChange={handleChangeUserOne} fullWidth label="LAST NAME" id="fullWidth" />
                 </div>
                 
             </div>
             <div className='cotainerButtonAndlabel'>
                 <div className='contanerRegister-item buttonAndlabel'>
-                    <Button onClick={navigateTobuilding} variant="contained">NEXT</Button>
+                    <Button  onClick={navigateTobuilding} variant="contained">NEXT</Button>
                     <label>STEP 1 OF 4</label>
                 </div>
             </div>

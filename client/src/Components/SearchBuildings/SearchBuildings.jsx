@@ -1,9 +1,14 @@
 import React from 'react'
 import { TextField, Button } from '@mui/material'
 import { useNavigate } from "react-router-dom";
+import { useLocation} from 'react-router';
 import './Assets/styles.css'
 
 function SearchBuildings() {
+    const location = useLocation();
+    console.log({location})
+    const firstName = location.state.dataUserOne.firstName
+    const LastName = location.state.dataUserOne.LastName
 
     const navigate = useNavigate();
 
@@ -15,7 +20,7 @@ function SearchBuildings() {
     <div className='contanerRegister-grid'>
         <div className=' title_'>
             <div>
-                <h2>Plesure to meet you,Cristian!</h2>
+                <h2>Plesure to meet you, {firstName} {LastName} !</h2>
                 <h2>What is your install addres?</h2>
             </div>
             

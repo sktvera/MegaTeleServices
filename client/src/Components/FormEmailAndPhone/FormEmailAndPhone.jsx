@@ -1,16 +1,16 @@
 import React from 'react'
 import { TextField, Button } from '@mui/material'
 import './Assets/styles.css'
-/* import { useNavigate } from "react-router-dom"; */
+import { useNavigate } from "react-router-dom";
 
 
 function FormEmailAndPhone() {
 
-   /*  const navigate = useNavigate();
+    const navigate = useNavigate();
 
-const navigateTobuilding = () => {
-  navigate(`/Search`);
-  } */
+const navigateToResult = () => {
+  navigate(`/Result`);
+  }
 
   return (
     <div className='containerEmailAndPhone'>
@@ -34,7 +34,7 @@ const navigateTobuilding = () => {
             
             <div className='cotainerButtonAndlabel'>
                 <div className=' buttonAndlabel'>
-                    <Button /* onClick={navigateTobuilding} */ variant="contained">SUSBCRIBE NOW!</Button>
+                    <Button onClick={navigateToResult} variant="contained">SUSBCRIBE NOW!</Button>
                     <label>STEP 1 OF 4</label>
                 </div>
             </div>
