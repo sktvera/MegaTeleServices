@@ -22,10 +22,13 @@ function WelcomeHome() {
                   <label>Are you ready to enjoy ultra-best service?</label>
               </Box>
               <Box className='itemWelcome'>
-                  <Button
+                <div className='buttonContainer'>
+                <Button
                   onClick={navigateTologin} 
                   variant="contained" 
                   className='buttonWelcome'>Let's DO IT!</Button>
+                </div>
+                
               </Box>
         </Grid>
     </div>

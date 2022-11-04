@@ -4,8 +4,7 @@ import Welcome from './Routes/Welcome/Welcome'
 import FormLogin from'./Routes/FormLogin/FormLogin'
 import Search from'./Routes/Search/Search'
 import SelectedPlans from'./Routes/SelectedPlans/SelectedPlans'
-/* 
-import FormEmail from'./Routes/Welcome/FormEmail' */
+import FormEmail from'./Routes/FormEmail/FormEmail'
 
 
 function App() {
@@ -15,9 +14,7 @@ function App() {
       <Route path="/FormLogin" element={<FormLogin/>}/>
       <Route path="/Search" element={<Search/>}/>
       <Route path="/SelectedPlans" element={<SelectedPlans/>}/> 
-      {/* 
-      
-      <Route path="/FormEmail" element={<FormEmail/>}/> */}
+      <Route path="/FormEmail" element={<FormEmail/>}/>
     </Routes>
   </>
   );

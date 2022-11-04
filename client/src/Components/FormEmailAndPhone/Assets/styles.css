@@ -1,28 +1,43 @@
-.contanerRegister{
+.container-input{
+   display: grid;
+   grid-template-rows:50% 50%;
+   display: flex;
+   justify-content: space-around;
+}
+    
+.containerEmailAndPhone{
     display: flex;
     justify-content: center;
     align-items: center;
     margin-top: 25em;
     }
      
-    .contanerRegister-grid{
+    .containerEmailAndPhone-grid{
         display: grid;
         grid-template-rows: 33% 33% 33%;
         max-width: 100%;
-        height: 30em;
+        height: 40em;
     }
-    .title_{
-        display: flex;
-        justify-content: center;
-    }
+    .title{
+display: flex;
+justify-content: space-around;
+display: grid;
+grid-template-rows: auto;}
     
-    .title_ div h2{
+    .title h2{
         display: flex;
-        justify-content: space-around;
+        justify-content:center;
+        align-items:unset;
         margin: 0px;
+        height: 1px;
         font-size: 40px;
         color: rgb(46, 45, 45);
     }
+    .title p{
+        display: flex;
+        align-items:initial;
+    }
+    
     
     
     .buttonAndlabel{
@@ -36,16 +51,13 @@
         justify-content: center;
     }
     
-    .inputs_{
+    .inputs{
         display: flex;
         justify-content: center;
         height: 140px;
-        width:40em;
+        width:65em;
         display: grid;
-        grid-template-columns:82% 18%;
-    }
-    .inputs_ div{
-     margin-right: 10px;
+        grid-template-columns: 50%;
     }
     .buttonAndlabel label{
         font-size: 14px;
@@ -54,11 +66,13 @@
         color: rgb(147, 145, 145);
         margin-top: 20px;
     }
-    
-    .inputs_ div .labelSearcBuildings{
+    .inputs div .inputsTextLabel{
         display: flex;
         justify-content: center;
-        text-decoration:underline ;
-        cursor: pointer
+        font-size: 11px;
+        text-decoration: underline;
+        cursor: pointer;
+        
     }
     
+ 
