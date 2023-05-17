@@ -1,7 +1,8 @@
-import React from 'react'
+import * as React from 'react';
 import { TextField, Button } from '@mui/material'
 import { useNavigate } from "react-router-dom";
 import { useLocation} from 'react-router';
+import { Link } from "react-router-dom";
 import './Assets/styles.css'
 
 function SearchBuildings() {
@@ -15,7 +16,9 @@ function SearchBuildings() {
     const navigateToPlans = () => {
       navigate(`/SelectedPlans`);
       }
+
   return (
+
     <div className='contanerRegister'>
     <div className='contanerRegister-grid'>
         <div className=' title_'>
@@ -27,18 +30,28 @@ function SearchBuildings() {
         </div>
         <div className=' inputs_'>
             <div >
-                <TextField  fullWidth label="STREET ADDRESS, CITY, STATE" id="fullWidth" />
-                <label className='labelSearcBuildings'> I can't find my address</label>
+                <TextField  
+                fullWidth 
+                label="STREET ADDRESS, CITY, STATE" 
+                id="fullWidth" 
+                />
+                 <Link className="hyperlink" to="/Support" >
+                    <label className='labelSearcBuildings'> I can't find my address</label>
+                 </Link>
+                
             </div>
             <div >
                 <TextField fullWidth label="APT #" id="fullWidth" />
             </div>
+
+
+            
             
         </div>
         <div className='cotainerButtonAndlabel'>
             <div className=' buttonAndlabel'>
                 <Button onClick={navigateToPlans} variant="contained">NEXT</Button>
-                <label>STEP 1 OF 4</label>
+                <label>STEP 2 OF 4</label>
             </div>
         </div>
        
@@ -48,3 +61,6 @@ function SearchBuildings() {
 }
 
 export default SearchBuildings
+
+
+

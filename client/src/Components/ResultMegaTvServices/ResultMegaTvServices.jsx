@@ -1,10 +1,23 @@
-import React from 'react'
+
+
+
+
+import React, { useState } from 'react'
+import { TextField, Button } from '@mui/material'
 import './Assets/styles.css'
+import { useNavigate } from "react-router-dom";
+
 
 function ResultMegaTvServices() {
+
+    
+ 
+
+    
+
   return (
-    <div>
-      <h1>hola</h1>
+    <div className='ResultMegaTvServices'>
+        
     </div>
   )
 }

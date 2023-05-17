@@ -1,38 +1,85 @@
 import React, { useState } from 'react'
 import { TextField, Button } from '@mui/material'
-import './Assets/styles.css'
-import { useNavigate } from "react-router-dom";
+import { Await, useNavigate } from "react-router-dom";
 
+
+import './Assets/styles.css'
 
 function RegisterInfo() {
     const navigate = useNavigate();
     const [dataUserOne, setDataUserOne] = useState({})
-    
-    const navigateTobuilding = () => {
-        navigate(`/Search`,{state: {dataUserOne}});
-        }
+   /*  firstName */
+    const [helperTextUserOne, setHelperTextUserOne] = useState("")
+    const [errorsUserOne, setErrorsUserOne] = useState(false)
+    /* LastName */
+    const [helperTextUserOneLastName, setHelperTextUserOneLastName] = useState("")
+    const [errorsUserOneLastName, setErrorsUserOneLastName] = useState(false)
 
-        const handleChangeUserOne = (e) => {
+    const navigateTobuilding = () => {
+
+        if(errorsUserOne === false && dataUserOne.firstName.length > 2 && errorsUserOneLastName === false && dataUserOne.LastName.length > 2 ){
+            navigate(`/Search`,{state: {dataUserOne}});
+        }}
+
+        const handleChangeUserOne = async (e) => {
             const value = e.target.value
             setDataUserOne({
                 ...dataUserOne,
                 [e.target.name]: value
             })
-            console.log(dataUserOne)
+            const nameRegex = /^[a-zA-ZáéíóúñÁÉÍÓÚÑj]+$/;
+           const validateFirstName = nameRegex.test(dataUserOne.firstName)
+           const validateLastName = nameRegex.test(dataUserOne.LastName)
+
+           /* validate name */
+           if(dataUserOne.firstName.length>15 || !validateFirstName ){
+            setErrorsUserOne(true) 
+            setHelperTextUserOne("Invalid first name") 
+           }else{
+            setErrorsUserOne(false)
+            setHelperTextUserOne("")
+           }
+
+            /* validate last name */
+            if(dataUserOne.LastName.length>15 || !validateLastName ){
+                setErrorsUserOneLastName(true) 
+                setHelperTextUserOneLastName("invalid last name") 
+               }else{
+                setErrorsUserOneLastName(false)
+                setHelperTextUserOneLastName("")
+               }
         }
 
   return (
-    <div className='contanerRegister'>
+    <div className='containedRegister'>
         <div className='contanerRegister-grid'>
             <div className='contanerRegister-item title'>
                 <h2>Awesome! Let's get started with the basics.</h2>
             </div>
             <div className='contanerRegister-item inputs'>
                 <div >
-                    <TextField name='firstName' onChange={handleChangeUserOne} className='inputsText' fullWidth label="FIRST NAME" id="fullWidth" />
+                    <TextField 
+                    type='text' 
+                    name='firstName' 
+                    onChange={handleChangeUserOne}
+                    helperText={helperTextUserOne}
+                    error={errorsUserOne}
+                    fullWidth 
+                    className='inputsText'  
+                    label="First Name"
+
+                    />
                 </div>
                 <div >
-                    <TextField name='LastName' onChange={handleChangeUserOne} fullWidth label="LAST NAME" id="fullWidth" />
+                    <TextField 
+                    type='text' 
+                    name='LastName' 
+                    onChange={handleChangeUserOne} 
+                    helperText={helperTextUserOneLastName}
+                    error={errorsUserOneLastName}
+                    fullWidth 
+                    label="Last Name"  
+                    />
                 </div>
                 
             </div>

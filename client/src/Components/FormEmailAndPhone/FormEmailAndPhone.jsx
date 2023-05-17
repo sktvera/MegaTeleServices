@@ -1,12 +1,15 @@
-import React from 'react'
+import { useState } from "react";
 import { TextField, Button } from '@mui/material'
 import './Assets/styles.css'
-import { useNavigate } from "react-router-dom";
+import {  useNavigate } from "react-router-dom";
+import PromCodeBody from '../../Components/PromCodeBody/PromCodeBody'
 
 
 function FormEmailAndPhone() {
 
-    const navigate = useNavigate();
+const [promCode, setPromCode] = useState(false)
+
+const navigate = useNavigate();
 
 const navigateToResult = () => {
   navigate(`/Result`);
@@ -27,7 +30,14 @@ const navigateToResult = () => {
                     </div>
                     <div >
                         <TextField fullWidth label="PHONE NUMBER" id="fullWidth" />
-                        <label className='inputsTextLabel'> I have a promo code!</label>
+                        
+                        <label onClick={()=>setPromCode(!promCode)} className='inputsTextLabel'> I have a promo code!</label>
+                       {
+                        promCode === true ?
+                        <PromCodeBody/>
+                        :null
+                       }
+                       
                     </div>
                     
                 </div>
@@ -35,7 +45,7 @@ const navigateToResult = () => {
             <div className='cotainerButtonAndlabel'>
                 <div className=' buttonAndlabel'>
                     <Button onClick={navigateToResult} variant="contained">SUSBCRIBE NOW!</Button>
-                    <label>STEP 1 OF 4</label>
+                    <label>STEP 4 OF 4</label>
                 </div>
             </div>
            

@@ -1,6 +1,24 @@
 
-import React from 'react'
-import { Radio, Button } from '@mui/material'
+import * as React from 'react';
+
+import Box from '@mui/material/Box';
+
+import Card from '@mui/material/Card';
+import CardActions from '@mui/material/CardActions';
+import CardContent from '@mui/material/CardContent';
+import CardHeader from '@mui/material/CardHeader';
+import CssBaseline from '@mui/material/CssBaseline';
+import Grid from '@mui/material/Grid';
+import StarIcon from '@mui/icons-material/StarBorder';
+
+import Typography from '@mui/material/Typography';
+import Link from '@mui/material/Link';
+import GlobalStyles from '@mui/material/GlobalStyles';
+import Container from '@mui/material/Container';
+import { TextField, Button, Radio } from '@mui/material'
+
+
+
 import { useNavigate } from "react-router-dom";
 import './Assets/styles.css'
 
@@ -11,77 +29,188 @@ function SelectedPlansTV(){
     const navigateToFormEmail = () => {
       navigate(`/FormEmail`);
       }
+
+
+
+      const tiers = [
+        {
+          title: 'Free',
+          price: '0',
+          description: [
+            '10 users included',
+            '2 GB of storage',
+            'Help center access',
+            'Email support',
+          ],
+          buttonText: 'Sign up for free',
+          buttonVariant: 'outlined',
+        },
+        {
+          title: 'Pro',
+          subheader: 'Most popular',
+          price: '15',
+          description: [
+            '20 users included',
+            '10 GB of storage',
+            'Help center access',
+            'Priority email support',
+          ],
+          buttonText: 'Get started',
+          buttonVariant: 'contained',
+        },
+        {
+          title: 'Enterprise',
+          price: '30',
+          description: [
+            '50 users included',
+            '30 GB of storage',
+            'Help center access',
+            'Phone & email support',
+          ],
+          buttonText: 'Contact us',
+          buttonVariant: 'outlined',
+        },
+      ];
+
+
+
+      const footers = [
+        {
+          title: 'Company',
+          description: ['Team', 'History', 'Contact us', 'Locations'],
+        },
+        {
+          title: 'Features',
+          description: [
+            'Cool stuff',
+            'Random feature',
+            'Team feature',
+            'Developer stuff',
+            'Another one',
+          ],
+        },
+        {
+          title: 'Resources',
+          description: ['Resource', 'Resource name', 'Another resource', 'Final resource'],
+        },
+        {
+          title: 'Legal',
+          description: ['Privacy policy', 'Terms of use'],
+        },
+      ];
+
+
   
   return (
-    <div className='containerCards'>
-        <div className='containerCards-grid'>
-            <div className=' title_cards'>
-                <div>
-                    <h2>Please select the TV plan you want to enjoy:</h2>
-                </div>
-            </div>
-            <div className='cards_Container'>
-                <div className=' cards_'>
-                      <div className='itemCard'>
-                            <div className='itemCard_'>
-                                 <div>
-                                      <h3>Basic</h3>
-                                      <label>service</label>
-                                 </div>
-                            </div>
-                            <div className='itemCard_'>
-                                  <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none"><path d="M5.5 2H4.1c-1 0-1.5 1.1-.8 1.8L9 9.5c1.6 1.6 4.3 1.6 5.9 0l5.7-5.7c.8-.7.3-1.8-.7-1.8h-1.4c-.8 0-1.6.3-2.2.9l-3.6 3.6c-.4.4-1.1.4-1.5 0L7.7 2.9C7.1 2.3 6.3 2 5.5 2ZM5.5 22H4.1c-.9 0-1.4-1.1-.7-1.8L9 14.5c1.6-1.6 4.3-1.6 5.9 0l5.7 5.7c.7.7.2 1.8-.7 1.8h-1.4c-.8 0-1.6-.3-2.2-.9l-3.6-3.6c-.4-.4-1.1-.4-1.5 0l-3.6 3.6c-.5.5-1.3.9-2.1.9Z" stroke="#FF8A65" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"></path></svg>
-                            </div>
-                            <div className='itemCard_'>
-                                <div>
-                                      <h2>
-                                          <p>$</p>
-                                          30
-                                          <p>/mo</p>
-                                        </h2>
-                                    <Radio
-                                      /* checked={selectedValue === 'a'}
-                                      onChange={handleChange} */
-                                      value="a"
-                                      name="radio-buttons"
-                                      inputProps={{ 'aria-label': 'A' }}
-                                    />
-                                </div>
-                            </div>
-                      </div>
-                      <div className='itemCard'>
-                            <div className='itemCard_'>
-                                 <div>
-                                      <h3>Basic</h3>
-                                      <label>service</label>
-                                 </div>
-                            </div>
-                            <div className='itemCard_'>
-                                  <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none"><path d="M5.5 2H4.1c-1 0-1.5 1.1-.8 1.8L9 9.5c1.6 1.6 4.3 1.6 5.9 0l5.7-5.7c.8-.7.3-1.8-.7-1.8h-1.4c-.8 0-1.6.3-2.2.9l-3.6 3.6c-.4.4-1.1.4-1.5 0L7.7 2.9C7.1 2.3 6.3 2 5.5 2ZM5.5 22H4.1c-.9 0-1.4-1.1-.7-1.8L9 14.5c1.6-1.6 4.3-1.6 5.9 0l5.7 5.7c.7.7.2 1.8-.7 1.8h-1.4c-.8 0-1.6-.3-2.2-.9l-3.6-3.6c-.4-.4-1.1-.4-1.5 0l-3.6 3.6c-.5.5-1.3.9-2.1.9Z" stroke="#FF8A65" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"></path></svg>
-                            </div>
-                            <div className='itemCard_'>
-                                <div>
-                                      <h2>
-                                          <p>$</p>
-                                          30
-                                          <p>/mo</p>
-                                        </h2>
-                                    <Radio
-                                      /* checked={selectedValue === 'a'}
-                                      onChange={handleChange} */
-                                      value="a"
-                                      name="radio-buttons"
-                                      inputProps={{ 'aria-label': 'A' }}
-                                    />
-                                </div>
-                            </div>
-                      </div>
-                </div>
-            </div>
+    <div >
+        <div>
+            
+<React.Fragment>
+      <GlobalStyles styles={{ ul: { margin: 0, padding: 0, listStyle: 'none' } }} />
+      <CssBaseline />
+    
+      {/* Hero unit */}
+      <Container disableGutters maxWidth="sm" component="main" sx={{ pt: 8, pb: 6 }}>
+        <Typography
+          component="h1"
+          variant="h2"
+          align="center"
+          color="text.primary"
+          gutterBottom
+        >
+          Choose Your Plan
+        </Typography>
+        <Typography variant="h5" align="center" color="text.secondary" component="p">
+      The Tele-Communications Plan That Best Suits You
+        </Typography>
+      </Container>
+      {/* End hero unit */}
+      <Container maxWidth="md" component="main">
+        <Grid container spacing={5} alignItems="flex-end">
+          {tiers.map((tier) => (
+            // Enterprise card is full width at sm breakpoint
+            <Grid
+              item
+              key={tier.title}
+              xs={12}
+              sm={tier.title === 'Enterprise' ? 12 : 6}
+              md={4}
+            >
+              <Card>
+                <CardHeader
+                  title={tier.title}
+                  subheader={tier.subheader}
+                  titleTypographyProps={{ align: 'center' }}
+                  action={tier.title === 'Pro' ? <StarIcon /> : null}
+                  subheaderTypographyProps={{
+                    align: 'center',
+                  }}
+                  sx={{
+                    backgroundColor: (theme) =>
+                      theme.palette.mode === 'light'
+                        ? theme.palette.grey[200]
+                        : theme.palette.grey[700],
+                  }}
+                />
+                <CardContent>
+                  <Box
+                    sx={{
+                      display: 'flex',
+                      justifyContent: 'center',
+                      alignItems: 'baseline',
+                      mb: 2,
+                    }}
+                  >
+                    <Typography component="h2" variant="h3" color="text.primary">
+                      ${tier.price}
+                    </Typography>
+                    <Typography variant="h6" color="text.secondary">
+                      /mo
+                    </Typography>
+                  </Box>
+                  <ul>
+                    {tier.description.map((line) => (
+                      <Typography
+                        component="li"
+                        variant="subtitle1"
+                        align="center"
+                        key={line}
+                      >
+                        {line}
+                      </Typography>
+                    ))}
+                  </ul>
+                </CardContent>
+                <CardActions>
+                  <Button fullWidth variant={tier.buttonVariant}>
+                    {tier.buttonText}
+                  </Button>
+                </CardActions>
+              </Card>
+            </Grid>
+          ))}
+        </Grid>
+      </Container>
+      {/* Footer */}
+      <Container
+        maxWidth="md"
+        component="footer"
+        sx={{
+          borderTop: (theme) => `1px solid ${theme.palette.divider}`,
+          mt: 8,
+          py: [3, 6],
+        }}
+      >
+    
+      </Container>
+ 
+    </React.Fragment>
+
+
             <div className='cotainerButtonAndlabel_'>
                 <div className=' buttonAndlabel'>
                     <Button onClick={navigateToFormEmail} variant="contained">NEXT</Button>
-                    <label>STEP 1 OF 4</label>
+                    <label>STEP 3 OF 4</label>
                 </div>
             </div>
           

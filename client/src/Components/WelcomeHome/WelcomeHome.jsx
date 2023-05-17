@@ -1,7 +1,8 @@
 import React from 'react'
-import './Assets/styles.css'
 import{ Button,Grid,Box }  from '@mui/material'
 import { useNavigate } from "react-router-dom";
+
+import './Assets/styles.css'
 
 function WelcomeHome() {
   const navigate = useNavigate();

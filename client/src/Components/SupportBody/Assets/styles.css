@@ -1,0 +1,28 @@
+.SupportBody{
+    height: 1000px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.contaned-grid{
+    display: grid;
+    grid-template-rows: 50% 50%;
+ height: 200px;
+}
+
+
+.title{
+    height: 100px;
+
+    display: grid;
+    grid-template-rows: auto auto;
+    gap: 30px;
+}
+
+.title h2{ 
+    font-size: 32;
+}
+.title p{
+    font-size: 25px;
+}

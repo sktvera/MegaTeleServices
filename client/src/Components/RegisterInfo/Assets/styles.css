@@ -1,8 +1,9 @@
-.contanerRegister{
-display: flex;
-justify-content: center;
-align-items: center;
-margin-top: 25em;
+.containedRegister{
+    height: 1000px;
+display: flex !important;
+justify-content: center !important;
+align-items: center !important;
+;
 }
  
 .contanerRegister-grid{
@@ -47,3 +48,7 @@ justify-content: center;}
     margin-top: 20px;
 }
 
+.contanerRegister-item div input
+{
+    font-family: 'Dosis', sans-serif !important;
+}
