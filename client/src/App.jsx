@@ -20,7 +20,7 @@ function App() {
       <Header/>
     <Routes>
       <Route path='/' exact={true} element={<Welcome/>}/>
-      <Route path='/https://sktvera.github.io/MegaTeleServices' element={<Welcome/>}/>
+      <Route path='/MegaTeleServices' element={<Welcome/>}/>
       <Route path="/FormLogin" element={<FormLogin/>}/>
       <Route path="/Search" element={<Search/>}/>
       <Route path="/SelectedPlans" element={<SelectedPlans/>}/> 
