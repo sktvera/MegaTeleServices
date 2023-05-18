@@ -1,0 +1,21 @@
+{
+  "files": {
+    "main.css": "/MegaTeleServices/static/css/main.df663231.css",
+    "main.js": "/MegaTeleServices/static/js/main.f52e3da0.js",
+    "static/media/AcceptedBlue.png": "/MegaTeleServices/static/media/AcceptedBlue.0279d34e90e110e7ef76.png",
+    "static/media/Selected.png": "/MegaTeleServices/static/media/Selected.9c2875e52a266c89c673.png",
+    "static/media/theBestTvServiceAround.png": "/MegaTeleServices/static/media/theBestTvServiceAround.5986568156b55c9d8c0e.png",
+    "static/media/SelectedOneOption.png": "/MegaTeleServices/static/media/SelectedOneOption.f9e068c77c6d1e8cac33.png",
+    "static/media/GreatNewsYourFirstMonthIsFree.png": "/MegaTeleServices/static/media/GreatNewsYourFirstMonthIsFree.9062e1481b0780e7419c.png",
+    "static/media/PleaseSelectTvPlanYouWantToEnjoy.png": "/MegaTeleServices/static/media/PleaseSelectTvPlanYouWantToEnjoy.52529391c753c9f0ada5.png",
+    "static/media/PleasureToMeetYouCristianWhatIsYourInstallAddress.png": "/MegaTeleServices/static/media/PleasureToMeetYouCristianWhatIsYourInstallAddress.a8ad020402e45b8081a3.png",
+    "static/media/AwesomeLetIsGetStartedWithTheBasics.png": "/MegaTeleServices/static/media/AwesomeLetIsGetStartedWithTheBasics.f645ec1030fdb8a8a086.png",
+    "index.html": "/MegaTeleServices/index.html",
+    "main.df663231.css.map": "/MegaTeleServices/static/css/main.df663231.css.map",
+    "main.f52e3da0.js.map": "/MegaTeleServices/static/js/main.f52e3da0.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.df663231.css",
+    "static/js/main.f52e3da0.js"
+  ]
+}
