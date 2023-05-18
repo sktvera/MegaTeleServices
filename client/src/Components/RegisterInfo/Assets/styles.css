@@ -1,26 +1,24 @@
 .containedRegister{
     height: 1000px;
-display: flex !important;
-justify-content: center !important;
-align-items: center !important;
-;
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
 }
- 
 .contanerRegister-grid{
     display: grid;
     grid-template-rows: 33% 33% 33%;
     max-width: 100%;
     height: 30em;
 }
-.title{display: flex;
-justify-content: center;}
-
+.title{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 .title h2{
     font-size: 40px;
     color: rgb(46, 45, 45);
 }
-
-
 .buttonAndlabel{
     display: grid;
     grid-template-rows: 50% 50%;
@@ -31,14 +29,16 @@ justify-content: center;}
     display: flex;
     justify-content: center;
 }
-
-.inputs{
+.inputsRegister{
     display: flex;
     justify-content: center;
-    height: 140px;
-    width:65em;
+    align-items: center;
     display: grid;
-    grid-template-columns: 50%;
+    grid-template-columns:50% ;
+}
+.inputsText{
+display: flex !important;
+align-items: end !important;
 }
 .buttonAndlabel label{
     font-size: 14px;
@@ -47,8 +47,20 @@ justify-content: center;}
     color: rgb(147, 145, 145);
     margin-top: 20px;
 }
-
-.contanerRegister-item div input
-{
+.contanerRegister-item div input{
     font-family: 'Dosis', sans-serif !important;
+}
+
+@media (max-width:1050px) {
+	.title{
+     width: 100%;
+    }
+}
+@media (max-width:700px) {
+	.title{
+     text-align: center;
+    }
+    .title h2{
+        font-size: 30px !important;
+    }
 }

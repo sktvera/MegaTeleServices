@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import { TextField, Button } from '@mui/material'
-import { Await, useNavigate } from "react-router-dom";
-
+import {  useNavigate } from "react-router-dom";
+import classnames from 'classnames';
 
 import './Assets/styles.css'
 
@@ -56,8 +56,11 @@ function RegisterInfo() {
             <div className='contanerRegister-item title'>
                 <h2>Awesome! Let's get started with the basics.</h2>
             </div>
-            <div className='contanerRegister-item inputs'>
-                <div >
+            <div className='contanerRegister-item inputsRegister'>
+              <div className={classnames(
+                {'inputsText': errorsUserOne === true? true: false }
+              )}  >
+
                     <TextField 
                     type='text' 
                     name='firstName' 
@@ -65,7 +68,6 @@ function RegisterInfo() {
                     helperText={helperTextUserOne}
                     error={errorsUserOne}
                     fullWidth 
-                    className='inputsText'  
                     label="First Name"
 
                     />

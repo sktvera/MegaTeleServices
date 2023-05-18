@@ -1,4 +1,3 @@
-
 import * as React from 'react';
 import Button from '@mui/material/Button';
 import CssBaseline from '@mui/material/CssBaseline';
@@ -7,16 +6,11 @@ import Grid from '@mui/material/Grid';
 import Box from '@mui/material/Box';
 import Typography from '@mui/material/Typography';
 import Container from '@mui/material/Container';
-
-import './Assets/styles.css'
 import { Link } from 'react-router-dom';
 
-
-
-
+import './Assets/styles.css'
 
 function LoginBody() {
-
     const handleSubmit = (event) => {
         event.preventDefault();
         const data = new FormData(event.currentTarget);
@@ -29,9 +23,6 @@ function LoginBody() {
   return (
    
 <div className='LoginBody'>
-
-
-
     <Container component="main" maxWidth="xs">
       <CssBaseline />
       <Box
@@ -41,17 +32,13 @@ function LoginBody() {
           alignItems: 'center',
         }}
       >
-       
         <Typography component="h1" variant="h5">
           Sign in
         </Typography>
         <Box component="form" noValidate onSubmit={handleSubmit} sx={{ mt: 3 }}>
           <Grid container spacing={2}>
-           
-           
             <Grid item xs={12}>
               <TextField
-              
                 fullWidth
                 id="email"
                 label="Email Address"
@@ -61,7 +48,6 @@ function LoginBody() {
             </Grid>
             <Grid item xs={12}>
               <TextField
-              
                 fullWidth
                 name="password"
                 label="Password"
@@ -70,10 +56,8 @@ function LoginBody() {
                 autoComplete="new-password"
               />
             </Grid>
-           
           </Grid>
           <Link to='/'>
-         
           <Button
             type="submit"
             fullWidth
@@ -85,9 +69,7 @@ function LoginBody() {
           </Link>
         </Box>
       </Box>
-    
     </Container>
-
   </div>
   )
 }

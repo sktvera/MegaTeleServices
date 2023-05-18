@@ -1,11 +1,9 @@
 .containerWelcome{
     height: 1000px;
-display: flex;
-justify-content: center;
-align-items: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
-
-
 .containerWelcome .itemWelcome h1{
     display: flex;
     justify-content: center;
@@ -13,23 +11,28 @@ align-items: center;
     color: #004274;
     font-size: 6em;
 }
-
 .containerWelcome .itemWelcome label{
     display: flex;
     justify-content: center;
     font-size: 2em;
 }
-
 .containerWelcome .itemWelcome .buttonWelcome{
     background-color:#004274;
     width: 200px;
     height: 70px;
-   
 }
-
 .buttonContainer{
     display: flex;
     justify-content: center;
     align-items: center;
     margin-top: 80px;
 }
+
+@media (max-width:550px) {
+	.containerWelcome .itemWelcome label{
+       text-align: center;
+        font-size: 2em;
+    }
+}
+
+

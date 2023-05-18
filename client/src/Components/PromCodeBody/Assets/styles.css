@@ -1,5 +1,69 @@
 .PromCodeBody{
-   
-background-color: aqua;
+padding: 10px 0px 0px 10px;
+height: 60px;
+border-radius: 8px;
+border: 1px solid rgba(0, 0, 0, 0.119);
 
+}
+
+.open-description{
+    display: flex;
+    justify-content: space-between;
+}
+
+.PromCodeBody-form{
+    padding: 10px 0px 0px 10px;
+height: 70px;
+border-radius: 8px;
+border: 1px solid rgba(0, 0, 0, 0.119);
+}
+
+.open-formAndButton{
+    display: grid;
+    grid-template-columns: auto auto;
+}
+.title-promCode{
+    display: grid;
+    grid-template-columns: auto auto;
+    width: 30%;
+}
+.title-promCode-form{
+   display: flex;
+   justify-content: center;
+   align-items: center;
+    
+}
+
+
+.title-promCode svg{
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.title-promCode p{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.openOrClose svg{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    transform: rotate(180deg);
+   margin-right: 20px;
+}
+
+.PromCodeBody:hover{
+    background-color: rgba(0, 0, 0, 0.212);
+    cursor: pointer;
+}
+.openOrClose .button-body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+ 
+    height: 100%;
 }

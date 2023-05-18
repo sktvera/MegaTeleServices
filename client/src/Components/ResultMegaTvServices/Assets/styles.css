@@ -1,0 +1,65 @@
+.ResultMegaTvServices{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 1000px;
+}
+.cardResult{
+    height: 500px;
+    width: 500px;
+    border-radius: 8px;
+    border:  1px solid rgba(0, 0, 0, 0.187); 
+    display: grid;
+    grid-template-rows: 40% 60%;  
+    gap:70px;
+}
+.imgAndH2{
+    margin-top: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.grid-imgAndH2{
+    display: grid;
+    grid-template-rows: auto auto;
+    text-align: center;
+}
+.grid-imgAndH2 h2{
+    font-size: 35px;
+}
+.AcceptedBlue {
+    height: 180px;
+}
+.AcceptedBlue img {
+    height: 100%;
+    object-fit: cover;
+}
+.navigateAndParagraph{
+    margin: 0px 30px 0px 30px;
+}
+.buttonNavigate{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+}
+.Paragraph{
+    font-size: 20px;
+}
+
+@media (max-width:500px) {
+    .AcceptedBlue {
+        height: 100px;
+    }
+    .imgAndH2{
+        margin-top: 10px;
+    }
+    .cardResult{
+        gap: 20px;
+        height: auto;
+    }
+    .Paragraph{
+        text-align: center;
+        font-size: 15px ;
+    }
+  }

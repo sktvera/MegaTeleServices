@@ -1,12 +1,13 @@
 import React from 'react'
 import { Button } from '@mui/material'
+
 import './Assets/styles.css'
+
 const SupportBody =()=> {
   return (
     <div className='SupportBody '>
-        <div className='contaned-grid'>
-            <div className='title'>
-                
+        <div className='contaned-grid-support'>
+            <div className='title-support'>
                 <h2>MEGA TELE SERVICES - SUPPORT</h2>
                 <p>how can we help you?</p>
             </div>

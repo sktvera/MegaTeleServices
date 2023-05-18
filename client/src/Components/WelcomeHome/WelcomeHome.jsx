@@ -18,7 +18,6 @@ function WelcomeHome() {
                   <h1>The Best TV service</h1>
                   <h1>around!</h1>
               </Box>
-              
               <Box className='itemWelcome'>
                   <label>Are you ready to enjoy ultra-best service?</label>
               </Box>
